@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Essai</title>
+        <link rel="stylesheet" href="./assets/style.css">
+	</head>
+    <body>
+        <div class="container">
+            <h2>Heartbeat by trackers</h2>
+            <ul class="responsive-table">
+              <li class="table-header">
+                <div class="col col-1">Id</div>
+                <div class="col col-2">Sensor_id</div>
+                <div class="col col-3">Room_id</div>
+                <div class="col col-4">Floor_id</div>
+                <div class="col col-5">Building_id</div>
+                <div class="col col-6">Created_at</div>
+              </li>
+              {{range .}}
+              <li class="table-row">
+                <div class="col col-1" data-label="Id">{{.Document_id}}</div>
+                <div class="col col-2" data-label="Sensor_id"> {{.Sensor_id}}</div>
+                <div class="col col-3" data-label="Room_id"> {{.Room_id}}</div>
+                <div class="col col-4" data-label="Floor_id">{{.Floor_id}}</div>
+                <div class="col col-5" data-label="Building_id">{{.Building_id}}</div>
+                <div class="col col-6" data-label="Created_at">{{.Created_at}}</div>
+                {{end}}
+              </li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
